@@ -8,13 +8,13 @@
 */
 int main(void)
 {
-	char t[70] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	int longitud = strlen(t);
+	char l[99] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	int length = strlen(l);
 	int i = 0;
 	
-	while (i < longitud)
+	while (i < length)
 	{
-		putchar(t[i]);
+		putchar(l[i]);
 		i++;
 	}
 	return (1);
