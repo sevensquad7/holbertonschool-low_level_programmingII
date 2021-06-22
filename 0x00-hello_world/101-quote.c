@@ -12,9 +12,9 @@ int main(void)
 	int longitud = strlen(t);
 	int i = 0;
 	while (i < longitud)
-{
-	putchar(t[i]);
-	i++;
-}
+	{
+		putchar(t[i]);
+		i++;
+	}
 	return (1)
 }
