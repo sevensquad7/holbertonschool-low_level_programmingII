@@ -4,9 +4,7 @@
  * main - check the code for Holberton School students.
  *
  * Return: Alphabet
- *
  */
-
 void print_alphabet(void)
 {
 	char letra;
@@ -15,6 +13,5 @@ void print_alphabet(void)
 	{
 		_putchar(letra);
 	}
-
 	_putchar('\n');
 }
