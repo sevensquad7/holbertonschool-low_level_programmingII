@@ -1,21 +1,21 @@
 #include "holberton.h"
 
-/*
-* Main : main function
+/**
+* main - check the code for Holberton School students.
 *
-* Return: Print a message \"Holberton\"
+* Return: Always 0.
 */
-
 int main(void)
 {
-	char message[] = "Holberton";
-	int i = 1;
-	int cadena=sizeof(message);
-
-	for (i=1;i<cadena;i++)
-	{
-		_putchar(message[i]);
-	}
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
 	_putchar('\n');
-	return(0);
+	return (0);
 }
