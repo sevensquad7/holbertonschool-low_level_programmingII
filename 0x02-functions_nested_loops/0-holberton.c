@@ -12,7 +12,7 @@ int main(void)
 	int i = 0;
 	int cadena=sizeof(message);
 
-	for (i=0;i<cadena;i++)
+	for (i=0;i<=cadena;i++)
 	{
 		_putchar(message[i]);
 	}
