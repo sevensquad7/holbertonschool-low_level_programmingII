@@ -9,10 +9,10 @@
 int main(void)
 {
 	char message[] = "Holberton";
-	int i = 0;
+	int i = 1;
 	int cadena=sizeof(message);
 
-	for (i=0;i<=cadena;i++)
+	for (i=1;i<cadena;i++)
 	{
 		_putchar(message[i]);
 	}
