@@ -9,11 +9,11 @@
 char letra;
 int i;
 
-void print_alphabet_x10(void)
+void print_alphabet(void)
 {
-for(letra = 'a' ; letra <= 'z' ; letra++)
-{
-_putchar(letra);
-}
-_putchar('\n');
+	for(letra = 'a' ; letra <= 'z' ; letra++)
+	{
+		_putchar(letra);
+	}
+	_putchar('\n');
 }
