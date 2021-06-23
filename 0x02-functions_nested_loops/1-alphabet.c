@@ -6,14 +6,14 @@
  * Return: Always 0\.
  */
 
-char letra;
-int i;
-
 void print_alphabet(void)
 {
+	char letra;
+
 	for(letra = 'a' ; letra <= 'z' ; letra++)
 	{
 		_putchar(letra);
 	}
+
 	_putchar('\n');
 }
