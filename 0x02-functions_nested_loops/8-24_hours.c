@@ -6,24 +6,33 @@
  * Return: Hours
  */
 
-int jack_bauer(void)
+void jack_bauer(void)
 {
-int h,m,i,j,k,l;
+	int a;
+	int b;
+	int c;
+	int d;
 
-for (h=0; h < 24; h++)
-{
-	i= h/10;
-	j= h% 10;
-	for (m =0; m <60; m++)
+	for (a = 0; a <= 2; a++)
 	{
-		k= m/10;
-		l= m% 10;
-		_putchar('0' + i);
-		_putchar('0' +j);
-		_putchar(':');
-		_putchar('0' +k);
-		_putchar('0' +l);
-		_putchar('\n');
+		for (b = 0; b <= 9; b++)
+		{
+			for (c = 0; c <= 5; c++)
+			{
+				for (d = 0; d <= 9; d++)
+				{
+					if (a == 2 && b > 3)
+					{
+						break;
+					}
+					_putchar('0' + a);
+					_putchar('0' + b);
+					_putchar(58);
+					_putchar('0' + c);
+					_putchar('0' + d);
+					_putchar('\n');
+				}
+			}
+		}
 	}
-}
 }
