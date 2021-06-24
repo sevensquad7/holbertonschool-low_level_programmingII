@@ -3,7 +3,8 @@
 /*
  * add - function that adds two integers and returns the result.
  *
- * Return: return sum of values
+ * Return: add return sum of values.
+ *
  */
 int add(int a, int b)
 {
