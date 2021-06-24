@@ -3,7 +3,7 @@
 /**
  * print_alphabet_x10 - print alphabet
  *
- * return: alphabet x 10 
+ * return: alphabet x10 
  */
 void print_alphabet_x10(void)
 {
