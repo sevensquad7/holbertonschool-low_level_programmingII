@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * times_tables - this function sorts the data in a table
+ * times_table - this function sorts the data in a table
  *
  * Return: 9x9 multiplication
  *
