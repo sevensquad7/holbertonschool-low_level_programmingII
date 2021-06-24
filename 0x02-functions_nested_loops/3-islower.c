@@ -1,10 +1,13 @@
 #include "holberton.h"
 
 /**
- * _islower - islower
+ * _islower - this function of c, replace the lowercase.
  *
- * return: 1 if c is lowercase, returns 0 otherwise.
+ * @c: It is ASCII Character.
+ *
+ * return: 1 if is lowercase or  0 otherwise.
  */
+
 int _islower(int c)
 {
 	if (c >= 97 && c <= 122)
