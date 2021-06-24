@@ -8,20 +8,20 @@
  */
 void times_table(void)
 {
-	int i=0,j=0,r=0;
-	int unidades=0;
-	int decenas=0;
+	int i = 0,j = 0,r = 0;
+	int unidades = 0;
+	int decenas = 0;
 
-	for (i=0; i <= 9; i++)
+	for (i = 0; i <= 9; i++)
 	{
-		for (j =0; j <= 9; j++)
+		for (j = 0; j <= 9; j++)
 		{
 			r = (i * j);
 			unidades = r%10;
 			decenas = r/10;
-			if (decenas==0)
+			if (decenas == 0)
 			{
-				if (j==0)
+				if (j == 0)
 				{
 					_putchar('0' + unidades);
 					_putchar(',');
