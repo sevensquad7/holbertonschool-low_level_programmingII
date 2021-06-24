@@ -1,7 +1,7 @@
 /*
  * _islower - _islower.
- *
- *Returns 1 if c is lowercase Returns 0 otherwise.
+ *@c: the character
+ * Return: 1 if c is lowercase Returns 0 otherwise.
  */
 int _islower(int c)
 {
