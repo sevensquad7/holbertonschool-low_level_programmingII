@@ -1,7 +1,7 @@
 /*
  * _islower - _islower.
  *
- * Return: if c is lowercase return 1, else 0.
+ *Returns 1 if c is lowercase Returns 0 otherwise.
  */
 int _islower(int c)
 {
