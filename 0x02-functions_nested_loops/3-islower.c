@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /*
  * _islower - _islower is 1 and other 0
  *
