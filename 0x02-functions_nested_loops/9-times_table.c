@@ -28,10 +28,6 @@ void times_table(void)
 				{
 					_putchar(',');
 				}
-				else
-				{
-					_putchar('$');
-				}
 			} 
 			else 
 			{
@@ -41,10 +37,6 @@ void times_table(void)
 				if (j < 9)
 				{
 					_putchar(',');
-				}
-				else
-				{
-				_putchar('$');
 				}
 			}
 		}
