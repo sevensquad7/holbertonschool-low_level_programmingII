@@ -2,8 +2,10 @@
 /**
  * times_tables - this function sorts the data in a table
  *
- * Returns: 9x9 multiplication
+ * Return: 9x9 multiplication
+ *
  */
+
 void times_table(void)
 {
 	int i = 0, j = 0, r = 0, unidades = 0, decenas = 0;
