@@ -1,6 +1,6 @@
 /*
- * _islower - _islower.
- *@c: the character
+ * _islower - converter character..
+ *
  * Return: 1 if c is lowercase Returns 0 otherwise.
  */
 int _islower(int c)
