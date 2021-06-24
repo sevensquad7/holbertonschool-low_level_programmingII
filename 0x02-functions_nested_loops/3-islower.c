@@ -1,7 +1,9 @@
-/*
- * _islower - converter character..
+#include "holberton.h"
+
+/**
+ * _islower - islower
  *
- * Return: 1 if c is lowercase Returns 0 otherwise.
+ * return: 1 if c is lowercase, returns 0 otherwise.
  */
 int _islower(int c)
 {
