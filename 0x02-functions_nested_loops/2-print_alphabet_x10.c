@@ -1,9 +1,9 @@
 #include "holberton.h"
 
-/*
- * print_alphabet_x10 - function print_alphabet_x10 
+/**
+ * print_alphabet_x10 - print alphabet
  *
- * return: print alphabetx10 
+ * return: alphabet x 10 
  */
 void print_alphabet_x10(void)
 {
