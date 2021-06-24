@@ -2,10 +2,9 @@
 
 /*
  * _islower - lower is 1 and other 0
- *
- * return: _islower 1 is lowercase and 0 otherwise
+ * 
+ * return: if c is lowercase 1 and otherwise 0 
  */
-
 int _islower(int c)
 {
 	if (c >= 97 && c <= 122)
