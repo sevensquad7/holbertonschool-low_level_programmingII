@@ -1,7 +1,7 @@
 /*
- * _islower - _islower is 1 and other 0
+ * _islower - _islower.
  *
- * return: if c is lowercase 1 and otherwise 0
+ * return: function _islower if c is lowercase 1 and otherwise 0
  */
 int _islower(int c)
 {
