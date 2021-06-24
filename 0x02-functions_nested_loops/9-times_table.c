@@ -13,8 +13,8 @@ void times_table(void)
 		for (j = 0; j <= 9; j++)
 		{
 			r = (i * j);
-			unidades = r%10;
-			decenas = r/10;
+			unidades = r % 10;
+			decenas = r / 10;
 			if (decenas == 0)
 			{
 				if (j == 0)
