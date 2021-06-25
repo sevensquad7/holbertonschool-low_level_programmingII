@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int alpha = 0;
+	int alpha;
 
 	for (alpha = 97; alpha <= 122; alpha++)
 	{
