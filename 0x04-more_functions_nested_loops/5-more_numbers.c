@@ -11,23 +11,16 @@
 
 void more_numbers(void)
 {
-	int a = 0, j = 0;
-	    
-	for (j = 0; j < 10; j++)
+	int i;
+	char c;
+
+	for (i = 0; i < 10; i++)
 	{
-		for (a = 0; a <= 14; a++)
+		for (c = 0; c <= 14; c++)
 		{
-			int decenas = a / 10;
-			int unidades = a % 10;
-			if (a > 9)
-			{
-				_putchar('0' + decenas);
-				_putchar('0'+ unidades);
-			}
-			else
-			{
-				_putchar('0'+ unidades);
-			}
+			if (c > 9)
+				_putchar((c / 10) + '0');
+			_putchar((c % 10) + '0');
 		}
 		_putchar('\n');
 	}
