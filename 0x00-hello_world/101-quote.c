@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-/*
+/**
  * main - main function
- *
- * return : print a message with printf
+ * followed by a new line, to the standard error.
+ * Return: print a message with printf
  *
  */
 
