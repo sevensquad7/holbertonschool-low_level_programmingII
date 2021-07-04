@@ -14,13 +14,13 @@ int b;
 int c;
 int d;
 
-for (a = 0; a <= 9; a++)
+for (a = 48; a <= 57; a++)
 {
-for (b = 0; b <= 9; b++)
+for (b = 48; b <= 57; b++)
 {
-for (c = 0; c <= 9; c++)
+for (c = 48; c <= 57; c++)
 {
-for (d = 0; d <= 9; d++)
+for (d = 48; d <= 57; d++)
 {
 if (a < c || (a == c && b < d))
 {
@@ -29,7 +29,7 @@ putchar(b);
 putchar(' ');
 putchar(c);
 putchar(d);
-if ((a < 9 && b <= 9) || (a == 9 && b <= 7))
+if ((a < 57 && b <= 57) || (a == 57 && b <= 56))
 {
 putchar(',');
 putchar(' ');
