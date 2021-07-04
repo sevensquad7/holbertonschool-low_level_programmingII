@@ -23,8 +23,8 @@ int main(void)
 
 				if (!(n == 55 && i == 56 && j == 57))
 				{
-					putchar(' ');
 					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
