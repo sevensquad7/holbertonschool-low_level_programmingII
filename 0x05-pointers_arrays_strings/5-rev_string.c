@@ -7,20 +7,20 @@
  */
 void rev_string(char *s)
 {
-	int i = 0;
-	char *k, reverse;
+	int i = 0, j = 0;
+	char cadena;
 
-	while (*(s + i) != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}
 
-	while (i > 0)
+	while (cadena < i)
 	{
-		reverse = s[i];
-		s[i] = *k;
-		*k = reverse;
-		k--;
-		i--;
+		i = i - 1;
+		cadena = s[i];
+		s[i] = s[j];
+		s[j] = cadena;
+		j--;
 	}
 }
