@@ -12,15 +12,14 @@ void rev_string(char *s)
 
 	while (s[i] != '\0')
 	{
+		cadena[i] = s[i];
 		i++;
 	}
 
-	while (cadena < i)
+	while (i > 0)
 	{
-		i = i - 1;
-		cadena = s[i];
-		s[i] = s[j];
-		s[j] = cadena;
-		j--;
+		s[j] = cadena[i - 1];
+		i--;
+		j++;
 	}
 }
