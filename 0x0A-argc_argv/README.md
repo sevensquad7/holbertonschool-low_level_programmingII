@@ -7,7 +7,7 @@ This indicates that main is a function returning an integer. In hosted environme
 There are at least two arguments to main: argc and argv. The first of these is a count of the arguments supplied to the program and the second is an array of pointers to the strings which are those arguments—its type is (almost) ‘array of pointer to char’. These arguments are passed to the program by the host system's command line interpreter or job control language.
 
 The declaration of the argv argument is often a novice programmer's first encounter with pointers to arrays of pointers and can prove intimidating. However, it is really quite simple to understand. Since argv is used to refer to an array of strings, its declaration will look like this:
-* char *argv[]
+* char *argv[]\n
 Remember too that when it is passed to a function, the name of an array is converted to the address of its first element. This means that we can also declare argv as char **argv; the two declarations are equivalent in this context.
 
 Indeed, you will often see the declaration of main expressed in these terms. This declaration is exactly equivalent to that shown above:
