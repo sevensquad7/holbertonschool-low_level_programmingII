@@ -3,7 +3,7 @@
 /**
  * prime_check - checks to see if number is prime
  * @f: factor check
- * @p: possible prime number
+ * @n: possible prime number
  *
  * Return: 1 if prime, 0 if not
  */
