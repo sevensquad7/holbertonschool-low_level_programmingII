@@ -3,6 +3,7 @@
 
 /**
  * main - multiplies two numbers
+ *
  * @argc: number of arguments passed to the function
  * @argv: argument vector of pointers to strings
  *
