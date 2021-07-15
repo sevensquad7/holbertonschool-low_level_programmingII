@@ -1,44 +1,52 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
-/**
- * main - program that prints all possible combinations
- * of two two-digit numbers.
+/** betty style doc for function main goes there
+ * main - Entry point
  *
- * Return: The numbers should range from 0 to 99
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-int a;
-int b;
-int c;
-int d;
+	int i, j, k, l;
 
-for (a = 48; a <= 57; a++)
-{
-for (b = 48; b <= 57; b++)
-{
-for (c = 48; c <= 57; c++)
-{
-for (d = 48; d <= 57; d++)
-{
-if (a < c || (a == c && b < d))
-{
-putchar(a);
-putchar(b);
-putchar(' ');
-putchar(c);
-putchar(d);
-if ((a < 57 && b <= 57) || (a == 57 && b <= 56))
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-}
-}
-}
-putchar('\n');
-return (0);
+	i = j = k = 48; l = 49;
+	while  ((i < 58))
+	{
+		putchar(i); putchar(j); putchar(32); putchar(k); putchar(l);
+		if ((i == 57) && (j == 56) && (k == 57) && (l == 57))
+		{
+			putchar('\n'); i++;
+		}
+		else
+		{
+			putchar(44); putchar(32);
+			if ((k == 57) && (l == 57))
+			{
+				if (j < 56)
+				{
+					l = ++j + 1; k = i;
+				}
+				else if (j == 56)
+				{
+					j++;
+					k = i + 1; l = 48;
+				}
+				else if (j == 57)
+				{
+					j = 48; l = 49; k = ++i;
+				}
+			}
+			else if (l < 57)
+			{
+				l++;
+			}
+			else
+			{
+				l = 48; k++;
+			}
+		}
+	}
+	return (0);
 }
