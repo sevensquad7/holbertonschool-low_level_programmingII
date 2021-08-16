@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_nodeint - function that adds a new node at the beginning 
+ * add_nodeint - function that adds a new node at the beginning
  * of a listint_t lists
  * @head: a list of elements with a pointer to the first element
  * @n: a element of the node
@@ -10,6 +10,7 @@
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *new;
+
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 	{
