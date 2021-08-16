@@ -1,16 +1,19 @@
 #include "lists.h"
 
 /**
- * free_listint - frees a linked list
- * @head: the head of a linked list
+ * listint_len - returns the number of elements in a linked listint_t list.
+ * @h: pointer to the linked list
  *
- * Return: Nothing
+ * Return: number of elements in a linked listint_t list
  */
-void free_listint(listint_t *head)
+size_t listint_len(const listint_t *h)
 {
-	if (head == NULL)
-		return;
-	if (head->next != NULL)
-		free_listint(head->next);
-	free(head);
+	size_t count = 0;
+
+	while (h != NULL)
+	{
+		count++;
+		h = h->next;
+	}
+	return (count);
 }
