@@ -42,7 +42,7 @@ void fnFloat(va_list al)
 
 /**
  * print_all - print everything
- * @format: string with chars to evaluate
+ * @format: strings with chars to evaluate
  */
 void print_all(const char * const format, ...)
 {
