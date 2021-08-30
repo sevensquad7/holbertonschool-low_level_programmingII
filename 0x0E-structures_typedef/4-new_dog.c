@@ -2,30 +2,32 @@
 
 /**
  * copy - function copy data string
- * @string: string of characters
- * 
+ * @str: string of characters
+ *
  * Return: copy of the string
  */
 
 char *copy(char *str)
 {
-    char *cop;
-    int len = 0, i;
+char *cop;
+int len = 0, i;
 
-    while (str[len] != '\0')
-        len++;
-    cop = malloc((len + 1) * sizeof(char));
-    if (cop == NULL)
-    {
-        free(cop);
-        return(NULL);
-    }
-    for (i = 0; i < len; i++)
-    {
-        cop[i] = str[i];
-    }
-    cop[i]= '\0';
-    return(cop);    
+while (str[len] != '\0')
+{
+len++;
+}
+cop = malloc((len + 1) * sizeof(char));
+if (cop == NULL)
+{
+free(cop);
+return (NULL);
+}
+for (i = 0; i < len; i++)
+{
+cop[i] = str[i];
+}
+cop[i] = '\0';
+return (cop);
 }
 
 /**
@@ -45,7 +47,7 @@ dog = malloc(sizeof(dog_t));
 
 if (dog == NULL)
 {
-    free(dog);
+free(dog);
 return (NULL);
 }
 dog->name = copy(na);
