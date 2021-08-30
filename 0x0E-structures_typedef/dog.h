@@ -2,6 +2,8 @@
 #define DOGBERTON
 #include <stdio.h>
 #include <stddef.h>
+#include <stdlib.h>
+
 /**
  * struct dog - structured dog
  * @name: name of the dog
