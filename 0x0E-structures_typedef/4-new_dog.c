@@ -17,11 +17,9 @@ if (dog == NULL)
 {
 return (NULL);
 }
-else
-{
 dog->name = name;
 dog->age = age;
 dog->owner = owner;
-}
+
 return (dog);
 }
