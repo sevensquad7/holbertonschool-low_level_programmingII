@@ -17,6 +17,7 @@ char *copy(char *str)
     cop = malloc((len + 1) * sizeof(char));
     if (cop == NULL)
     {
+        free(cop);
         return(NULL);
     }
     for (i = 0; i < len; i++)
@@ -44,6 +45,7 @@ dog = malloc(sizeof(dog_t));
 
 if (dog == NULL)
 {
+    free(dog);
 return (NULL);
 }
 dog->name = copy(na);
