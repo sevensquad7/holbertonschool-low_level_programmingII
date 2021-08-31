@@ -1,61 +1,23 @@
 #include "main.h"
 
 /**
- * _pow - returns the power raised to the base number
- * @base: base number
- * @power: times to multiply the base
+ * flip_bits - returns the number of bits you would need to flip to get
+ * from one number to another
+ * @n: first number
+ * @m: second number
  *
- * Return: pow
+ * Return: count, number of bits needed to get from one number to another
  */
 
-unsigned int _pow(unsigned int base, unsigned int power)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int i;
-	unsigned int pow = 1;
+	unsigned long int count = 0;
+	unsigned long int bits = n ^ m;
 
-	if (power == 0)
+	while (bits)
 	{
-		return (1);
+		count += (bits & 1);
+		bits = bits >> 1;
 	}
-	else if (power == 1)
-	{
-		return (base);
-	}
-	else
-	{
-		for (i = 0; i < power; i++)
-		{
-			pow *= base;
-		}
-		return (pow);
-	}
-}
-
-/**
- * clear_bit - sets the value of a bit to 0 at a given index
- * @n: decimal number
- * @index: the index, starting from 0 of the bit you want to set
- *
- * Return: 1 if it worked, or -1 if an error occurred
- */
-
-int clear_bit(unsigned long int *n, unsigned int index)
-{
-	if (index > (sizeof(unsigned long int) * 8))
-	{
-		return (-1);
-	}
-	else if (*n == 0)
-	{
-		*n = 0;
-	}
-	else if (_pow(2, index) > *n)
-	{
-		return (1);
-	}
-	else
-	{
-		*n = *n - _pow(2, index);
-	}
-	return (1);
+	return (count);
 }
