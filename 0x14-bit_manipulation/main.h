@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdint.h>
 
 int _putchar(char c);
 unsigned int _pow(unsigned int base, unsigned int power);
