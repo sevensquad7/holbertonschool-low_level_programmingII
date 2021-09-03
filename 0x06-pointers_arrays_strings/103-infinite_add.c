@@ -1,48 +1,47 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * infinite_add - function that adds two numbers.
- * @n1: str
- * @n2: str
- * @r: str
- * @size_r: int
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer for result
+ * @size_r: buffer size
  *
- * Return: string
+ * Return: address of r or 0
  */
-int add(void) { return (0); }
-char *infinite_add(char *n1, char *n2, char *r, int size_r) {
-int fill, i, j, lenN1, lenN2, sum = 0, reste = 0, totalSum = 0, multiple = 1;
-
-for (lenN1 = 0; n1[lenN1]; ++lenN1);
-for (lenN2 = 0; n2[lenN2]; lenN2++);
-j = lenN2 - 1;
-int k = size_r - 1;
-for (i = lenN1 - 1; i >= 0; i--, j--, k--)
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-if (j >= 0)
-sum = n1[i] + n2[j] + reste - 96;
-else
-sum = n1[i] + reste - 48;
+	int i, j, k, l, m, n;
 
-if (sum > 9)
-reste = sum / 10;
-else
-reste = 0;
-
-r[k] = (sum % 10) + 48;
-printf("k->%d, r[k]=%d, \n", k, r[k] - 48);
-}
-printf("%d\n", k);
-
-r[size_r] = '\0';
-
-if (k <= 0 && reste)
-return (0);
-else if (reste)
-r[k] = reste;
-
-r[size_r] = '\0';
-add();
-return (r);
+	for (i = 0; n1[i]; i++)
+		;
+	for (j = 0; n2[j]; j++)
+		;
+	if (i > size_r || j > size_r)
+		return (0);
+	m = 0;
+	for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
+	{
+		n = m;
+		if (i >= 0)
+			n += n1[i] - '0';
+		if (j >= 0)
+			n += n2[j] - '0';
+		if (i < 0 && j < 0 && n == 0)
+		{
+			break;
+		}
+		m = n / 10;
+		r[k] = n % 10 + '0';
+	}
+	r[k] = '\0';
+	if (i >= 0 || j >= 0 || m)
+		return (0);
+	for (k -= 1, l = 0; l < k; k--, l++)
+	{
+		m = r[k];
+		r[k] = r[l];
+		r[l] = m;
+	}
+	return (r);
 }
