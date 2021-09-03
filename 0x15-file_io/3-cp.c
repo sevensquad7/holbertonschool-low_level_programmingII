@@ -50,7 +50,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		write(2, "Usage: cp file_from file_to\n", 27);
+		write(2, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
 	fd1 = open(argv[1], O_RDONLY);
