@@ -1,4 +1,3 @@
-#include "_putchar.c"
 #include "main.h"
 /**
  * print_number - function that prints an integer.
