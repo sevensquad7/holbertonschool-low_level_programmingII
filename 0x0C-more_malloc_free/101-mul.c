@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * test_error - test_error error test of file mul
+ * @argc: argument one
+ * @argv: argument two
+ * Return - 0
+ */
+
 int test_error(int argc, char **argv)
 {
 	int i, j;
@@ -25,6 +32,13 @@ int test_error(int argc, char **argv)
 	return (0);
 }
 
+/**
+ * main - main use atoi of file mul
+ * @argc: argument one
+ * @argv: argument two
+ * Return - main
+ */
+
 int main(int argc, char **argv)
 {
 	int err;
@@ -37,5 +51,5 @@ int main(int argc, char **argv)
 	num2 = atoi(argv[2]);
 	mul = num1 * num2;
 	printf("%d\n", mul);
-	exit (0);
+	exit(0);
 }
