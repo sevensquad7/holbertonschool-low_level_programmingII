@@ -19,8 +19,7 @@ void read_and_write(int fd1, int fd2, char *buf, char *f1, char *f2)
 		r1 = read(fd1, buf, 1024);
 		if (r1 == -1)
 		{
-			dprintf(2, "Error: Can't read from file %s\n",
-					f1);
+			dprintf(1, "Error: Can't read from file %s\n",f1);
 			exit(98);
 		}
 		w2 = write(fd2, buf, r1);
