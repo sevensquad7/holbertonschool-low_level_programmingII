@@ -1,6 +1,15 @@
 #include "lists.h"
 
-listint_t *nodolista (const listint_t *n)
+/**
+ * nodolista - list nodo
+ * @n: value nodo
+ * Return: value list
+ *
+ *
+ */
+
+
+listint_t *nodolista(const listint_t *n)
 {
 	listint_t *turtle = (listint_t *) n, *rabit;
 
@@ -11,41 +20,47 @@ listint_t *nodolista (const listint_t *n)
 	rabit = turtle->next;
 	while (rabit != NULL)
 	{
-		rabit=rabit->next;
+		rabit = rabit->next;
 		if (rabit == NULL)
 		{
 			return (NULL);
 		}
-		rabit=rabit->next;
-		turtle=turtle->next;
+		rabit = rabit->next;
+		turtle = turtle->next;
 		if (rabit == turtle)
 		{
 			rabit = (listint_t *) n;
 			while (rabit != turtle)
 			{
-				turtle=turtle->next;
+				turtle = turtle->next;
 				if (rabit == turtle)
 				{
-					return(rabit);
+					return (rabit);
 				}
-				
-				rabit=rabit->next;
+
+				rabit = rabit->next;
 			}
-			
-			return(rabit);
+
+			return (rabit);
 		}
 	}
-	return(NULL);
+	return (NULL);
 }
-
+/**
+ * find_listint_loop - function that finds the loop in a linked list.
+ * @head: value list
+ * Return: The address of the node where the loop starts,
+ * or NULL if there is no loop
+ *
+ */
 listint_t *find_listint_loop(listint_t *head)
 {
 	if (head == NULL)
 	{
 		return (NULL);
 	}
-	
-	return(nodolista (head));
+
+	return (nodolista(head));
 }
 
 
