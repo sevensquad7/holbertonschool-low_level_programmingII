@@ -1,55 +1,99 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-/**
- * test_error - test_error error test of file mul
- * @argc: argument one
- * @argv: argument two
- * Return - 0
- */
-
-int test_error(int argc, char **argv)
+void set_to_zero(char *str, int len)
 {
-	int i, j;
+	int i;
 
-	if (argc != 3)
-	{
-		printf("Error\n");
-		return (98);
-	}
-	for (i = 1; i <= 2; i++)
-	{
-		for (j = 0; argv[i][j] != '\0'; j++)
-		{
-			if (argv[i][j] < 48 || argv[i][j] > 57)
-			{
-				printf("Error\n");
-				return (98);
-			}
-		}
-	}
-	return (0);
+	for (i = 0; i < len; i++)
+		str[i] = '0';
 }
 
-/**
- * main - main use atoi of file mul
- * @argc: argument one
- * @argv: argument two
- * Return - main
- */
-
-int main(int argc, char **argv)
+int is_valid_num(char *str)
 {
-	int err;
-	unsigned int mul, num1, num2;
+	int i;
 
-	err = test_error(argc, argv);
-	if (err != 0)
+	for (i = 0; str[i] != '\0'; i++)
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+
+	return (1);
+}
+
+int len(char *str)
+{
+	int l = 0;
+
+	while (str[l])
+		l++;
+
+	return (l);
+}
+
+void print_res(char *n1, char *n2)
+{
+	int l1, l2, len_res, pos, dig1, dig2, cifra, lleva = 0;
+	int i, in1, in2, mult, cif, pos_cif;
+	char *res;
+
+	if (!is_valid_num(n1) || !is_valid_num(n2))
+	{
+		printf("Error\n");
 		exit(98);
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-	mul = num1 * num2;
-	printf("%d\n", mul);
-	exit(0);
+	}
+
+	l1 = len(n1);
+	l2 = len(n2);
+
+	len_res = l1 + l2 + 1;
+
+	res = malloc(sizeof(*res) * len_res);
+	if (res == NULL)
+		return;
+
+	set_to_zero(res, len_res);
+
+	res[--len_res] = '\0';
+	pos = len_res - 1;
+
+	for (in1 = l1 - 1; in1 >= 0; in1--)
+	{
+		len_res = pos;
+		lleva = 0;
+		for (in2 = l2 - 1; len_res >= 0 && in2 >= 0; in2--)
+		{
+			dig1 = n1[in1] - '0';
+			dig2 = n2[in2] - '0';
+
+			cif = res[len_res] - '0';
+			mult = (dig1 * dig2) + lleva + cif;
+			cifra = mult % 10;
+			lleva = mult / 10;
+
+			res[len_res--] = cifra + '0';
+		}
+
+		pos--;
+		res[len_res--] = lleva + '0';
+	}
+
+	if (res[++len_res] == '0')
+		len_res++;
+
+	printf("%s\n", &res[len_res]);
+
+	free(res);
+}
+
+int main(int ac, char **av)
+{
+	if (ac != 3)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	print_res(av[1], av[2]);
+
+return (0);
 }
