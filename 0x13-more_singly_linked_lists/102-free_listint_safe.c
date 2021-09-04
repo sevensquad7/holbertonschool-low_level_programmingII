@@ -1,42 +1,36 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
+listint_t *nodolist (const listint_t *n);
 
-/**
-* free_listint_safe - function that frees linked list
-* @h: pointer to pointer to elements of type listint_t
-* Return: the number of nodes in the list that were freed
-**/
+
 size_t free_listint_safe(listint_t **h)
 {
-	size_t counter;
-	listint_t *temp;
-	adrsList *newList, *newHead;
+	size_t count = 0;
+	int intersec=0;
+	listint_t *nod;
+	listint_t *head;
+	listint_t *next;
 
-	counter = 0;
-	if (*h == NULL)
-		return (counter);
-	newHead = newList = NULL;
-	while (*h)
+	if (h == NULL || *h == NULL)
 	{
-		while (newList)
-		{
-			if ((*newList).ptr == *h)
-			{
-				free_adrsList(newHead);
-				newHead = NULL;
-				*h = NULL;
-				return (counter);
-			}
-			newList = (*newList).next;
-		}
-		newList = add_node(&newHead, (void *)*h);
-		temp = *h;
-		*h = (*(*h)).next;
-		free(temp);
-		counter++;
+		return (0);
 	}
-	free_adrsList(newHead);
+	head = *h;
+	nod = nodolist(head);
+	while (head != NULL)
+	{
+		if (head == nod && intersec == 1)
+		{
+			break;
+		}
+		if (head == nod)
+		{
+			intersec = 1;
+		}
+		next = head->next;
+		free(head);
+		head = next;
+		count++;
+	}
 	*h = NULL;
-	return (counter);
+	return (count);
 }
