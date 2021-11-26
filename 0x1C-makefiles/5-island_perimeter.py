@@ -37,4 +37,3 @@ def island_perimeter(grid):
                 elif a == 0 or a == llen:
                     square += 1
     return square
-    
